@@ -13,4 +13,8 @@ To contribute to this repo:
    a pull request** to integrate your changes in this repository.
 
 More information will come during the course.
-   
+
+# Licensing
+Note that the License of this repository is GPL2 (see License file)
+All your code will be publicly released unless otherwise specified   
+
