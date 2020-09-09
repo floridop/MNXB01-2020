@@ -2,7 +2,7 @@
 # testif.sh
 # run with: ./testif.sh arg1 arg2 arg3
 #
-# test that at least two arguments are passed to the script
+# test that at least three arguments are passed to the script
 if  [[ $# -le 2 ]];  then
     echo "Not enough arguments. Must be at least 3!";
     exit 1;
