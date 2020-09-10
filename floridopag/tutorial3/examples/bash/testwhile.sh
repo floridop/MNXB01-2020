@@ -2,13 +2,13 @@
 # testwhile.sh
 # run with: ./testwhile.sh
 #
-# Continue asking numbers until the user writes “end”
-while [ "$var1" != "end" ]; do     # while test "$var1" != "end"
+# Continue asking to type until the user writes “end”
+while [ "$var1" != "end" ]; do
   echo "Input variable value (end to exit) "
-  read var1                   # Not 'read $var1' (why?).
-  echo "variable value = $var1"   # Need quotes because of "#" . . .
+  # read expects a variable name, not a value, so no $var1 here
+  read var1
+  echo "variable value = $var1"
   # If input is 'end', echoes it here.
   # Does not test for termination condition until top of loop.
 echo
-done  
-exit 0
+done
