@@ -1,12 +1,12 @@
-cp ~/.bashrc ~/bashrc_20200911backup
-geany ~/.bashrc &
+cp ~/.bash_profile ~/bash_profile20200911backup
+geany ~/.bash_profile &
 
 #Add at the end of the file the following lines:
 MNXB01DIR=/nfs/shared/pp/MNXB01/
 alias cdMNXB01='cd $MNXB01DIR'
 #save
 
-source ~/.bashrc
+source ~/.bash_profile
 
 cdMNXB01
 
