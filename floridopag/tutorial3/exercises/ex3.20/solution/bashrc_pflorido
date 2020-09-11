@@ -1,0 +1,3 @@
+alias ls='ls --color'
+MNXB01DIR=/nfs/shared/pp/MNXB01/
+alias cdMNXB01='cd $MNXB01DIR'
