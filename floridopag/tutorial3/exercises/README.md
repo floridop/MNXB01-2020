@@ -2,6 +2,19 @@
 # MNXB01-2020 Tutorial 3 training exercises
 -------------------------------------------
 
+# Folder structure
+
+```
+└── tutorial3
+    ├── exercises
+    │   ├── ex3.x
+    │   │   ├── output
+    │   │   └── solution
+    │   │       ├── command_to_run
+    │   │       └── predefinedvars.sh
+
+```
+
 # Instructions
 
 1. cd into the exercise folder `ex3.x` where `x` is the number of the exercise
