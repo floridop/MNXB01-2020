@@ -1,0 +1,11 @@
+$ ./smhicleaner.sh '../data/smhi-opendata_1_52240_20200905_163726.csv' 
+Copying input file ../data/smhi-opendata_1_52240_20200905_163726.csv to original_smhi-opendata_1_52240_20200905_163726.csv
+Finding the first line containing 'Datum'...
+Removing the first 11 lines, result in clean1_smhi-opendata_1_52240_20200905_163726.csv
+Selecting only relevant columns, result in clean2_smhi-opendata_1_52240_20200905_163726.csv
+Substituting the ; with spaces, result in rawdata_smhi-opendata_1_52240_20200905_163726.csv
+Filesizes summary:
+   file clean1_smhi-opendata_1_52240_20200905_163726.csv has size: 2535790
+   file clean2_smhi-opendata_1_52240_20200905_163726.csv has size: 2535330
+   file original_smhi-opendata_1_52240_20200905_163726.csv has size: 2536195
+   file rawdata_smhi-opendata_1_52240_20200905_163726.csv has size: 2535330
