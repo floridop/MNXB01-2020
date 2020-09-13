@@ -137,21 +137,21 @@ geany  smhicleaner.sh&
 
 The file shmicleaner.sh.pseudocode contains pseudocode written by the
 teacher to help you progressing and increasing your knowledge of bash.
-It consists in 10 exercises E1-E10 with a defined task and its 
+It consists of 10 exercises `E1-E10` with a defined task and its 
 description, and points that you gain for completing the task correctly.
 
-You are requested to write code where the text says YOUR_CODE_HERE
+You are requested to write code where the text says `YOUR_CODE_HERE`
 
-Delete the text YOUR_CODE_HERE and start writing your own according to
-the exercise request. There is no limit in how much you write as long
-as it fulfils the requirements of the exercise.
+**Delete** the text `YOUR_CODE_HERE` and start writing your own code
+according to the exercise request. There is no limit in how much you 
+write as long as it fulfils the requirements of the exercise.
 
 You can do the exercises one by one and test the result against the
-files in the /result folder (see folder structure below)
+files in the `result/` folder (see folder structure below)
 
-If you are annoyed by the error messages, use the # symbol to comment
-out lines so that bash will ignore them as in the examples in
-Tutorial 3.
+If you are annoyed by the error messages caused by lines that you did 
+not yet edit, use the # symbol to comment out lines so that bash will 
+ignore them as we've seen in the examples in Tutorial 3.
 
 ### Folder structure
 
@@ -189,16 +189,8 @@ the files
 
 Exercises E1 to E6 generate the output shown above.
 
-Then you can check how much of E7-E10 you achieved by comparing the 
-output of your script to
-
-```
-└── result # contains examples of the final result and the command output
-    ├── output_copying  # output of the script when a file path is passed as parameter
-    ├── output_downloading  # output of the script when a URL is passed as parameter
-```
-
-And of each of the intermediate files
+Then you can check how much of E7-E10 you achieved by comparing each of 
+the intermediate files you generate to
 
 ```
 └── result # contains examples of the final result and the command output
@@ -208,12 +200,28 @@ And of each of the intermediate files
     └── rawdata_smhi-opendata_1_52240_20200905_163726.csv # output file result of E9, final result.
 ```
 
+And finally compare the final output of your script to
+
+```
+└── result # contains examples of the final result and the command output
+    ├── output_copying  # output of the script when a file path is passed as parameter
+    ├── output_downloading  # output of the script when a URL is passed as parameter
+```
+
 for this purpose you can use a text tool called `diff`
 <https://www.geeksforgeeks.org/diff-command-linux-examples/>
 
 Compare `myfile` to `resultfile`:
 ```bash
 diff /path/to/myfile /path/to/resultfile
+```
+
+For example, if you're editing `smhicleaner.sh` in the `~/tutorial3/homework3/code` folder,
+and you generated the first file `clean1_smhi-opendata_1_52240_20200905_163726.csv` in
+the same folder, you can do:
+
+```bash
+diff ~/tutorial3/homework3/code/clean1_smhi-opendata_1_52240_20200905_163726.csv ~/tutorial3/homework3/result/clean1_smhi-opendata_1_52240_20200905_163726.csv
 ```
 
 Or if you want a graphical tool you can use `meld`:
