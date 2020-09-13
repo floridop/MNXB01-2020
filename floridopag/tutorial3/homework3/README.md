@@ -181,16 +181,16 @@ exercises with separate score.
 ### Prepare for the homework
 
 1. Copy the homework directory to your 
-home directory on Iridium:
+   home directory on Iridium:
 
 ```console
-cp -ar /nfs/shared/pp/MNXB01/tutorial3/homework3 ~/tutorial3/homework3
+cp -ar /nfs/shared/pp/MNXB01/tutorial3/homework3 ~
 ```
 
 2. Access the directory where the pseudocode is:
 
 ```console
-cd ~/tutorial3/homework3/code
+cd ~/homework3/code
 ```
 
 3. Rename the pseudocode file:
@@ -202,7 +202,13 @@ mv smhicleaner.sh.pseudocode smhicleaner.sh
 4. Open the file with geany and read and write the code described in the tasks
 
 ```console
-geany  smhicleaner.sh&
+geany smhicleaner.sh&
+```
+
+- To test your code, don't forget to make smhicleaner.sh executable:
+
+```console
+chmod +x smhicleaner.sh
 ```
 
 ### How to progress 
