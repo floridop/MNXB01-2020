@@ -93,6 +93,8 @@ that is, like this:
 ...
 ```
 
+This will be done by creating three intermediate files that will clean
+up step-by-step, so that you can verify your progress.
 
 ## The homework
 
@@ -151,8 +153,76 @@ If you are annoyed by the error messages, use the # symbol to comment
 out lines so that bash will ignore them as in the examples in
 Tutorial 3.
 
+### Folder structure
 
+the tutorial3/homework3 structure is as follows:
 
+```bash
+.
+├── README.md # this document
+├── code # contains the code you have to edit
+│   └── smhicleaner.sh.pseudocode  # the file you have to edit
+├── data # contains the original data
+│   ├── README.md
+│   └── smhi-opendata_1_52240_20200905_163726.csv
+└── result # contains examples of the final result and the command output
+    ├── clean1_smhi-opendata_1_52240_20200905_163726.csv  # output file result of E7
+    ├── clean2_smhi-opendata_1_52240_20200905_163726.csv  # output file result of E8
+    ├── original_smhi-opendata_1_52240_20200905_163726.csv  # original file: it matches ../data/smhi-opendata_1_52240_20200905_163726.csv
+    ├── output_copying  # output of the script when a file path is passed as parameter
+    ├── output_downloading  # output of the script when a URL is passed as parameter
+    ├── output_error_no_params # output of the script when no parameter is passed
+    ├── output_error_problems_downloading_or_copying # output of the script if the download or the copy fails
+    └── rawdata_smhi-opendata_1_52240_20200905_163726.csv # output file result of E9, final result.
+```
+
+### Tracking your progress
+
+You can track your progress by comparing the output of your script to 
+the files
+
+```
+└── result # contains examples of the final result and the command output
+    ├── output_error_no_params # output of the script when no parameter is passed
+    ├── output_error_problems_downloading_or_copying # output of the script if the download or the copy fails
+```
+
+Exercises E1 to E6 generate the output shown above.
+
+Then you can check how much of E7-E10 you achieved by comparing the 
+output of your script to
+
+```
+└── result # contains examples of the final result and the command output
+    ├── output_copying  # output of the script when a file path is passed as parameter
+    ├── output_downloading  # output of the script when a URL is passed as parameter
+```
+
+And of each of the intermediate files
+
+```
+└── result # contains examples of the final result and the command output
+    ├── clean1_smhi-opendata_1_52240_20200905_163726.csv  # output file result of E7
+    ├── clean2_smhi-opendata_1_52240_20200905_163726.csv  # output file result of E8
+    ├── original_smhi-opendata_1_52240_20200905_163726.csv  # original file: it matches ../data/smhi-opendata_1_52240_20200905_163726.csv
+    └── rawdata_smhi-opendata_1_52240_20200905_163726.csv # output file result of E9, final result.
+```
+
+for this purpose you can use a text tool called `diff`
+<https://www.geeksforgeeks.org/diff-command-linux-examples/>
+
+Compare `myfile` to `resultfile`:
+```bash
+diff /path/to/myfile /path/to/resultfile
+```
+
+Or if you want a graphical tool you can use `meld`:
+<https://meldmerge.org/>
+
+Compare `myfile` to `resultfile`:
+```bash
+meld /path/to/myfile /path/to/resultfile
+```
 
 ### Score and grades (tentative)
 
