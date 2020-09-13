@@ -1,6 +1,4 @@
 --------------------------------------------------------
-#     WORK IN PROGRESS. Further details will come.
---------------------------------------------------------
 # MNXB01-2020-homework-3
 --------------------------------------------------------
 ### Author: Florido Paganelli florido.paganelli@hep.lu.se
