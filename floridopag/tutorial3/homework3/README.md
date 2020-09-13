@@ -19,7 +19,9 @@ In this exercise you will be asked to
 ## The problem
 
 You are given a dataset from SMHI that contains data about the
-temperatures measured by a weather station in Falsterbo.
+temperatures measured by a weather station in Falsterbo:
+
+</nfs/shared/pp/MNXB01/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv>
 
 The data appears to be in CSV format, but presents some
 inconsistencies.
@@ -93,8 +95,34 @@ that is, like this:
 ...
 ```
 
-This will be done by creating three intermediate files that will clean
-up step-by-step, so that you can verify your progress.
+In detail, the script must:
+
+1. Be able to run when launched in these two ways:
+
+```bash
+# Dataset is at a network location:
+./smhicleaner.sh 'https://github.com/floridop/MNXB01-2020/raw/master/floridopag/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv'
+
+# Dataset is on a filesystem:
+#        ./smhicleaner.sh /nfs/shared/pp/MNXB01/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv
+
+```
+
+2. Show errors and exit with `exit` status `1` if the input parameter is
+   missing or the files cannot be retrieved
+   
+3. Create the following 4 intermediate files:
+- <original_smhi-opendata_1_52240_20200905_163726.csv> : a copy of the original file `smhi-opendata_1_52240_20200905_163726.csv`
+- <clean1_smhi-opendata_1_52240_20200905_163726.csv>: a cleanup of the original data file with only the lines after the line that starts with `Datum`
+- <clean2_smhi-opendata_1_52240_20200905_163726.csv>: a cleanup of `clean1_smhi-opendata_1_52240_20200905_163726.csv` without the additional metadata at the end of each line
+- <rawdata_smhi-opendata_1_52240_20200905_163726.csv>: the final result that should contain only the lines about temperature data as in the example above.
+
+4. The script must show the user what is going on and give good errors 
+as in the `result/output_*` files (see "Folder structure" below for 
+descriptions of each file)
+
+All these steps are guided inside the homework pseudocode file
+located in `code/smhicleaner.sh.pseudocode`
 
 ## The homework
 
@@ -150,7 +178,7 @@ You can do the exercises one by one and test the result against the
 files in the `result/` folder (see folder structure below)
 
 If you are annoyed by the error messages caused by lines that you did 
-not yet edit, use the # symbol to comment out lines so that bash will 
+not yet edit, use the `#` symbol to comment out lines so that bash will 
 ignore them as we've seen in the examples in Tutorial 3.
 
 ### Folder structure
