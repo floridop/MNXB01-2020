@@ -95,44 +95,49 @@ that is, like this:
 ...
 ```
 
+## The homework
+
+Your task is to use bash to accomplish the dataset cleanup.
+
+Write a script that takes as input a URL or a path to a file similar
+to the one in the examples reported below and produces a clean datafile
+ready to be processed by C++.
+
+The code must work with any URL/filename, and not just with the ones 
+in the examples, as the file might be in different locations
+when the teacher tests your code.
+
 In detail, the script must:
 
 1. Be able to run when launched in these two ways:
 
 ```bash
 # Dataset is at a network location:
-./smhicleaner.sh 'https://github.com/floridop/MNXB01-2020/raw/master/floridopag/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv'
+  ./smhicleaner.sh 'https://github.com/floridop/MNXB01-2020/raw/master/floridopag/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv'
 
 # Dataset is on a filesystem:
-#        ./smhicleaner.sh /nfs/shared/pp/MNXB01/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv
-
+  ./smhicleaner.sh /nfs/shared/pp/MNXB01/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv
 ```
 
 2. Show errors and exit with `exit` status `1` if the input parameter is
-   missing or the files cannot be retrieved
+   missing or the files cannot be retrieved/copied
    
 3. Create the following 4 intermediate files:
-- <original_smhi-opendata_1_52240_20200905_163726.csv> : a copy of the original file `smhi-opendata_1_52240_20200905_163726.csv`
-- <clean1_smhi-opendata_1_52240_20200905_163726.csv>: a cleanup of the original data file with only the lines after the line that starts with `Datum`
-- <clean2_smhi-opendata_1_52240_20200905_163726.csv>: a cleanup of `clean1_smhi-opendata_1_52240_20200905_163726.csv` without the additional metadata at the end of each line
-- <rawdata_smhi-opendata_1_52240_20200905_163726.csv>: the final result that should contain only the lines about temperature data as in the example above.
+- `original_smhi-opendata_1_52240_20200905_163726.csv` : a copy of the original file `smhi-opendata_1_52240_20200905_163726.csv`
+- `clean1_smhi-opendata_1_52240_20200905_163726.csv`: a cleanup of the original data file with only the lines after the line that starts with `Datum`
+- `clean2_smhi-opendata_1_52240_20200905_163726.csv`: a cleanup of `clean1_smhi-opendata_1_52240_20200905_163726.csv` without the additional metadata at the end of each line
+- `rawdata_smhi-opendata_1_52240_20200905_163726.csv`: the final result that should contain only the lines about temperature data as in the example above.
 
 4. The script must show the user what is going on and give good errors 
 as in the `result/output_*` files (see "Folder structure" below for 
 descriptions of each file)
 
-All these steps are guided inside the homework pseudocode file
-located in `code/smhicleaner.sh.pseudocode`
+For your convenience, the homework is guided, for you to get used to
+writing some pseudocode.
 
-## The homework
-
-Your task is to use bash to accomplish the dataset cleanup.
-
-Write a script that takes as input a URL or a path to a file similar
-to the one in the examples reported in this document.
-The code must work with any URL/filename, and not just with the ones 
-in the examples, as the file might be in different locations
-when the teacher tests your code.
+All the above steps are detailed inside the homework pseudocode file
+located in `code/smhicleaner.sh.pseudocode` and divided in separate 
+exercises with separate score.
 
 ### Prepare for the homework
 
