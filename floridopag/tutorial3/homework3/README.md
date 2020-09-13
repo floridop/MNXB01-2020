@@ -19,7 +19,7 @@ In this exercise you will be asked to
 You are given a dataset from SMHI that contains data about the
 temperatures measured by a weather station in Falsterbo:
 
-`/nfs/shared/pp/MNXB01/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv>`
+`/nfs/shared/pp/MNXB01/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv`
 
 The data appears to be in CSV format, but presents some
 inconsistencies.
@@ -235,8 +235,8 @@ the tutorial3/homework3 structure is as follows:
 ├── code # contains the code you have to edit
 │   └── smhicleaner.sh.pseudocode  # the file you have to edit
 ├── data # contains the original data
-│   ├── README.md
-│   └── smhi-opendata_1_52240_20200905_163726.csv
+│   ├── README.md # info about the data and whre it can be retrieved
+│   └── smhi-opendata_1_52240_20200905_163726.csv # original data taken from SMHI, see the README.md file above
 └── result # contains examples of the final result and the command output
     ├── clean1_smhi-opendata_1_52240_20200905_163726.csv  # output file result of E7
     ├── clean2_smhi-opendata_1_52240_20200905_163726.csv  # output file result of E8
