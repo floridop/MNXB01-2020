@@ -21,7 +21,7 @@ In this exercise you will be asked to
 You are given a dataset from SMHI that contains data about the
 temperatures measured by a weather station in Falsterbo:
 
-</nfs/shared/pp/MNXB01/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv>
+`/nfs/shared/pp/MNXB01/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv>`
 
 The data appears to be in CSV format, but presents some
 inconsistencies.
@@ -111,7 +111,7 @@ In detail, the script must:
 
 1. Be able to run when launched in these two ways:
 
-```bash
+```console
 # Dataset is at a network location:
   ./smhicleaner.sh 'https://github.com/floridop/MNXB01-2020/raw/master/floridopag/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv'
 
@@ -132,7 +132,7 @@ In detail, the script must:
 as in the `result/output_*` files (see "Folder structure" below for 
 descriptions of each file).
 This is an example of the solution and what the output and generated files should look like:
-```bash
+```console
 [pflorido@atariXL solution]$ ./smhicleaner.sh 'https://github.com/floridop/MNXB01-2020/raw/master/floridopag/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv'
 Downloading https://github.com/floridop/MNXB01-2020/raw/master/floridopag/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv into smhi-opendata_1_52240_20200905_163726.csv
 --2020-09-13 16:42:55--  https://github.com/floridop/MNXB01-2020/raw/master/floridopag/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv
@@ -183,25 +183,25 @@ exercises with separate score.
 1. Copy the homework directory to your 
 home directory on Iridium:
 
-```bash
+```console
 cp -ar /nfs/shared/pp/MNXB01/tutorial3/homework3 ~/tutorial3/homework3
 ```
 
 2. Access the directory where the pseudocode is:
 
-```bash
+```console
 cd ~/tutorial3/homework3/code
 ```
 
 3. Rename the pseudocode file:
 
-```bash
+```console
 mv smhicleaner.sh.pseudocode smhicleaner.sh
 ```
 
 4. Open the file with geany and read and write the code described in the tasks
 
-```bash
+```console
 geany  smhicleaner.sh&
 ```
 
@@ -229,7 +229,7 @@ ignore them as we've seen in the examples in Tutorial 3.
 
 the tutorial3/homework3 structure is as follows:
 
-```bash
+```
 .
 ├── README.md # this document
 ├── code # contains the code you have to edit
@@ -284,7 +284,7 @@ for this purpose you can use a text tool called `diff`
 <https://www.geeksforgeeks.org/diff-command-linux-examples/>
 
 Compare `myfile` to `resultfile`:
-```bash
+```console
 diff /path/to/myfile /path/to/resultfile
 ```
 
@@ -292,7 +292,7 @@ For example, if you're editing `smhicleaner.sh` in the `~/tutorial3/homework3/co
 and you generated the first file `clean1_smhi-opendata_1_52240_20200905_163726.csv` in
 the same folder, you can do:
 
-```bash
+```console
 diff ~/tutorial3/homework3/code/clean1_smhi-opendata_1_52240_20200905_163726.csv ~/tutorial3/homework3/result/clean1_smhi-opendata_1_52240_20200905_163726.csv
 ```
 
@@ -300,7 +300,7 @@ Or if you want a graphical tool you can use `meld`:
 <https://meldmerge.org/>
 
 Compare `myfile` to `resultfile`:
-```bash
+```console
 meld /path/to/myfile /path/to/resultfile
 ```
 
