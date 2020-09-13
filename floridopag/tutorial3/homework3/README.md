@@ -130,7 +130,45 @@ In detail, the script must:
 
 4. The script must show the user what is going on and give good errors 
 as in the `result/output_*` files (see "Folder structure" below for 
-descriptions of each file)
+descriptions of each file).
+This is an example of the solution and what the output and generated files should look like:
+```bash
+[pflorido@atariXL solution]$ ./smhicleaner.sh 'https://github.com/floridop/MNXB01-2020/raw/master/floridopag/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv'
+Downloading https://github.com/floridop/MNXB01-2020/raw/master/floridopag/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv into smhi-opendata_1_52240_20200905_163726.csv
+--2020-09-13 16:42:55--  https://github.com/floridop/MNXB01-2020/raw/master/floridopag/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv
+Resolving github.com (github.com)... 140.82.121.3
+Connecting to github.com (github.com)|140.82.121.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/floridop/MNXB01-2020/master/floridopag/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv [following]
+--2020-09-13 16:42:56--  https://raw.githubusercontent.com/floridop/MNXB01-2020/master/floridopag/tutorial3/homework3/data/smhi-opendata_1_52240_20200905_163726.csv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 199.232.40.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|199.232.40.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2536195 (2,4M) [text/plain]
+Saving to: ‘original_smhi-opendata_1_52240_20200905_163726.csv’
+
+original_smhi-opendata_1_52240_20200905_163726.csv 100%[================================================================================================================>]   2,42M  10,2MB/s    in 0,2s    
+
+2020-09-13 16:42:57 (10,2 MB/s) - ‘original_smhi-opendata_1_52240_20200905_163726.csv’ saved [2536195/2536195]
+
+Finding the first line containing 'Datum'...
+Removing the first 11 lines, result in clean1_smhi-opendata_1_52240_20200905_163726.csv
+Selecting only relevant columns, result in clean2_smhi-opendata_1_52240_20200905_163726.csv
+Substituting the ; with spaces, result in rawdata_smhi-opendata_1_52240_20200905_163726.csv
+Filesizes summary:
+   file clean1_smhi-opendata_1_52240_20200905_163726.csv has size: 2535790
+   file clean2_smhi-opendata_1_52240_20200905_163726.csv has size: 2535330
+   file original_smhi-opendata_1_52240_20200905_163726.csv has size: 2536195
+   file rawdata_smhi-opendata_1_52240_20200905_163726.csv has size: 2535330
+[pflorido@atariXL solution]$ ls
+clean1_smhi-opendata_1_52240_20200905_163726.csv  original_smhi-opendata_1_52240_20200905_163726.csv  smhicleaner.sh
+clean2_smhi-opendata_1_52240_20200905_163726.csv  rawdata_smhi-opendata_1_52240_20200905_163726.csv
+pflorido@atariXL:~/ownCloud/teaching/programming4science2020/florido/Tutorial3/homework3/solution$ 
+
+```
+
+
+
 
 For your convenience, the homework is guided, for you to get used to
 writing some pseudocode.
@@ -138,6 +176,7 @@ writing some pseudocode.
 All the above steps are detailed inside the homework pseudocode file
 located in `code/smhicleaner.sh.pseudocode` and divided in separate 
 exercises with separate score.
+
 
 ### Prepare for the homework
 
