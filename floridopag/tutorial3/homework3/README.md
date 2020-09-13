@@ -158,18 +158,20 @@ Filesizes summary:
    file clean2_smhi-opendata_1_52240_20200905_163726.csv has size: 2535330
    file original_smhi-opendata_1_52240_20200905_163726.csv has size: 2536195
    file rawdata_smhi-opendata_1_52240_20200905_163726.csv has size: 2535330
-[pflorido@atariXL solution]$ ls
-clean1_smhi-opendata_1_52240_20200905_163726.csv  original_smhi-opendata_1_52240_20200905_163726.csv  smhicleaner.sh
-clean2_smhi-opendata_1_52240_20200905_163726.csv  rawdata_smhi-opendata_1_52240_20200905_163726.csv
-pflorido@atariXL:~/ownCloud/teaching/programming4science2020/florido/Tutorial3/homework3/solution$ 
 
+[pflorido@atariXL solution]$ ls -ltrah
+total 9,7M
+drwxr-xr-x 7 pflorido pflorido 4,0K sep 12 18:48 ..
+-rwxrwxr-x 1 pflorido pflorido 8,4K sep 12 18:55 smhicleaner.sh
+-rw-r--r-- 1 pflorido pflorido 2,5M sep 13 16:42 original_smhi-opendata_1_52240_20200905_163726.csv
+-rw-r--r-- 1 pflorido pflorido 2,5M sep 13 16:42 clean1_smhi-opendata_1_52240_20200905_163726.csv
+-rw-r--r-- 1 pflorido pflorido 2,5M sep 13 16:42 clean2_smhi-opendata_1_52240_20200905_163726.csv
+drwxrwxr-x 2 pflorido pflorido 4,0K sep 13 16:42 .
+-rw-r--r-- 1 pflorido pflorido 2,5M sep 13 16:42 rawdata_smhi-opendata_1_52240_20200905_163726.csv
 ```
 
-
-
-
 For your convenience, the homework is guided, for you to get used to
-writing some pseudocode.
+reading/writing some pseudocode.
 
 All the above steps are detailed inside the homework pseudocode file
 located in `code/smhicleaner.sh.pseudocode` and divided in separate 
