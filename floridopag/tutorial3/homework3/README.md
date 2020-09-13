@@ -71,7 +71,7 @@ Datum;Tid (UTC);Lufttemperatur;Kvalitet;;Tidsutsnitt:
 
 ```
 
-The final result should look *exactly* like the in file
+The final result should look **exactly** like the in file
 
 ```
    result/rawdata_smhi-opendata_1_52240_20200905_163726.csv
