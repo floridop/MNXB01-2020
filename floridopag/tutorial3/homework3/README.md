@@ -312,3 +312,4 @@ The total score is 27+4. Each task has an associated score.
 - Score 26-28 : perfect, grade 4
 - Score 29-30 : outstanding, grade 5 only possible if the student does all E1-9 at maximum points AND the OPTIONAL part E10.
 
+# Good Luck!
